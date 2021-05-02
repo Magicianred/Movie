@@ -1,0 +1,15 @@
+    <div class="card mb-5" >
+        <div class="card-body">
+          <img [src]="'https://image.tmdb.org/t/p/w300'+card.poster_path" class="card-img-top"/>
+          <h5 class="card-title">{{card.title}}</h5>
+          <p class="card-text collapse" [id]="'collapseSummary'+card.id">{{card.overview}}</p>
+          <a class="collapsed" data-toggle="collapse" [href]="'#collapseSummary'+card.id" aria-expanded="false" [attr.aria-controls]="'collapseSummary'+card.id"></a>
+          <div class="card-footer comment">
+            <i [ngClass]="liked?'fas fa-thumbs-up':'far fa-thumbs-up'" (click)="isLiked()"></i>
+            <button class="home-button rounded m-0" (click)="focus()" >comment</button>
+            <i [ngClass]="heart? 'fas fa-heart':'far fa-heart'" (click)="isfavourite(card)" ></i>
+          </div>
+          <input  type="text" #commentInput class="form-control mr-1" placeholder="write your comment" (keyup.enter)="addComment($event,card.id)" autofocus />
+      <app-comment [cardId]="card.id" [comment]="comment"></app-comment>
+        </div>
+    </div>

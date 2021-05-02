@@ -1,0 +1,56 @@
+<nav class="navbar navbar-light">
+  <a class="navbar-brand p-0" routerLink="/home">
+    <img src='/assets/images/logo-small.png' class="logo-image"/>
+   </a></nav>
+<section class="create-account">
+<div class="container mr-auto ml-auto">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 new-account">
+<form [formGroup]="registerForm" (ngSubmit)="createAccount(registerForm.value)" novalidate>
+    <div class="mb-3">
+        <label for="exampleName" class="form-label">User Name: *</label>
+        <input type="text" formControlName="name" class="form-control" id="exampleName">
+        <em class="validate" *ngIf="name.invalid &&name.dirty || invalid && name.invalid" > this field is required</em>
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address: *</label>
+      <input type="email" class="form-control"   formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" email >
+      <em class="validate" *ngIf="email.invalid &&email.dirty && email.errors?.required && email.dirty || invalid && email.invalid && email.errors?.required"> this field is required</em>
+      <em class="validate" *ngIf="email.invalid && email.dirty && email.errors?.email "> email should be in this pattern:example@example.com</em>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password: *</label>
+      <input type="password" class="form-control"   formControlName="password" id="exampleInputPassword1">
+      <em class="validate" *ngIf="password.invalid && password.dirty && password.errors?.required || invalid && password.invalid && password.errors?.required">  this field is required</em>
+      <em class="validate" *ngIf="password.invalid && password.dirty && password.errors?.length">{{password.errors?.length}}</em>
+      <em class="validate" *ngIf="password.invalid && password.dirty && password.errors?.letter"> {{password.errors?.letter}} </em>
+      <em class="validate" *ngIf="password.invalid && password.dirty && password.errors?.capitalletter"> {{password.errors?.capitalletter}} </em>
+            <em class="validate" *ngIf="password.invalid && password.dirty && password.errors?.number"> {{password.errors?.number}} </em>
+
+
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword2"  class="form-label">Confirm Password: *</label>
+        <input type="password" class="form-control" id="exampleInputPassword2" formControlName="confirmPassword">
+        <em class="validate" *ngIf="confirmPassword.invalid && confirmPassword.dirty  && password.errors?.required || invalid && confirmPassword.invalid && confirmPassword.errors?.required"> this field is required</em>
+        <em class="validate" *ngIf="confirmPassword.valid && confirmPassword.dirty  && password.value!==confirmPassword.value">password is not match</em>
+      </div>
+    <button type="submit" class="home-button">Next</button>
+    <a routerLink="/login" class="login-link"> already have account? Sign in</a>
+  </form>
+      <div class="or">
+          <span class="or-span">or</span>
+      </div>
+      <div class="google-sign">
+          <button class="btn btn-light">
+            <i class="fab fa-google float-left"></i>
+              <span> Sign up with Google</span>
+          </button>
+      </div>
+</div>
+</div>
+</div>
+</section>
+<section class="footer">
+<app-footer></app-footer>
+</section>

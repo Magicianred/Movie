@@ -1,0 +1,37 @@
+<ul class="comment-content" >
+    <li class="lists" *ngFor="let card of comment">
+      <div class="reply-section">
+        <i class="fas fa-user"></i>
+     <span> {{card.comment}}</span>
+      </div>
+     <div class="reply">
+      <a href="#" class="link ml-4" (click)="ShowInput($event)">reply</a>
+       <input type="text" class="form-control d-none " placeholder="write a reply" (keyup.enter)="addReply($event,card.id)"  />
+     </div>
+     <ul class="reply-content">
+       <li class="lists" *ngFor="let item of card.reply">
+        <div class="reply-section pl-4">
+         <i class="fas fa-user mr-0"></i>
+         <span>{{item.reply}}</span>
+        </div>
+         <div class="reply">
+          <a href="#" class="link ml-5" (click)="ShowInput($event)" >reply</a>
+           <input #replyInput type="text" class="form-control d-none mr-1 " placeholder="write a reply" (keyup.enter)="addSubReply($event,card.id,item.id)"  />
+          </div>
+         <ul class="reply-content mt-0">
+           <li class="lists"  *ngFor="let n of item.subreply">
+            <div class="reply-section  pl-5">
+             <i class="fas fa-user mr-0"></i>
+             <span>{{n}}</span>
+          </div>
+             <div class="reply">
+              <a href="#" class="link" (click)="ShowInput($event)">reply</a>
+               <input type="text" class="form-control d-none mr-1 " placeholder="write a reply" (keyup.enter)="addSubReply($event,card.id,item.id)"  />
+              </div>
+            </li>
+
+         </ul>
+        </li>
+     </ul>
+    </li>
+     </ul>

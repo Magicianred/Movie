@@ -1,0 +1,43 @@
+.login,.create-account{
+    width: 35%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+
+ 
+}
+
+.container{
+    padding: 60px;
+    margin: 0;
+}
+ 
+
+::ng-deep body{
+    background-image:url('../../assets/images/best-series.jpg');
+    background-color:linear-gradient(to top, #202020, rgb(2 2 2 / 90%));
+    background-blend-mode: overlay;
+}
+.login-link{
+    color: white;
+    float: right;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.home-button{
+    display: block;
+    width: 100%;
+}
+.error{
+    color: #ff0000;
+    font-size: 12px;
+}
+.navbar-brand{
+    margin: 22px 175px;
+}

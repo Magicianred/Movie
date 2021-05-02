@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<section class="pricing">
+    <section class="bg-1">
+        <div class="sub-header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12">
+                        <nav aria-label="breadcrumb" class="text-center breadcrumb-nav">
+                            <h2 class="Page-title">Pricing Plans</h2>
+                            <ol class="breadcrumb">
+                                <li>
+                                    <i class="fa fa-home"></i>
+                                    <a href="#">Home</a>
+                                    <i class="fa fa-angle-right"></i>
+                                </li>
+                                <li><a href="#">Pricing Plans</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pricing-content">
+        <div class="container">
+            <div class="row  text-center">
+                <div class="col-12">
+                    <h2 class="pricing-header">Our Monthly Plans</h2>
+                    <p class="pricing-paragraph">Choose the ideal plan for what you need. We work with affordable prices for all types of pocket.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4" *ngFor="let i of pricing">
+                    <div class="card mb-5 mb-lg-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-muted text-uppercase text-center">{{i.title}}</h5>
+                            <h6 class="card-price text-center">${{i.price}}<span class="period">/month</span></h6>
+                            <hr>
+                            <ul class="fa-ul" *ngFor="let item of i.limits">
+                                <li [ngClass]="!item.access?'text-muted':''"><span class="fa-li"><i [ngClass]="!item.access?'fas fa-times':'fas fa-check'"></i></span><strong>{{item.title}}</strong></li>
+                            </ul>
+                            <button class="home-button hvr-sweep-to-right text-uppercase">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<section class="footer">
+<app-footer></app-footer>
+</section>

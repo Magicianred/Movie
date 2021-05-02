@@ -1,0 +1,119 @@
+
+<app-navbar></app-navbar>
+<section class="home">
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+      <ng-container  *ngFor="let item of data ; index as index">
+      <div [ngClass]="index===0?'carousel-item bg-1 active':'carousel-item bg-1 '">
+        <img [src]="item.image" class="d-block w-100" alt="...">
+        <div class="container-fluid h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-xl-6 col-lg-12 col-md-12">
+                    <div class="home-content">
+                        <span class="new">new</span>
+                        <h1>{{item.h1}}</h1>
+                        <div class="specification">
+                        <span>2021</span>
+                        <span class="plus">+18</span>
+                        <span>2h 6m</span>
+                    </div>
+                        <p>{{item.p}}</p>
+                        <div class="buttons">
+                            <button type="button" class="home-button">
+                                <i class="fas fa-play"></i> Play</button>
+                            <button type="button" class="home-button">
+                                <i class="fas fa-plus"></i> My list
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </ng-container>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </section>
+  <section class="movies">
+    <div class="container p-0">
+      <div class="row">
+        <div class="col-md-12">
+    <ul class="nav nav-tabs">
+        <li class="nav-item" role="presentation" *ngFor="let i of links;  index as index" >
+          <a [ngClass]="index===0? 'nav-link active':'nav-link' " (click)="ChangeMovies($event,i)">{{i}}</a>
+        </li>
+      </ul>
+      <div class="movie-content">
+            <div class="row">
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2" *ngFor="let i of movies">
+                <div class="movie-card">
+                <div class="image">
+                <img [src]="'https://image.tmdb.org/t/p/w300'+i.poster_path"/>
+              </div>
+              <h2 class="movie-title">{{i.title}}</h2>
+              <div class="bar">
+                <span class="date">2021</span>
+                <span class="adult">+18</span>
+                <span class="date">Action</span>
+              </div>
+              <ul class="movie-icons">
+                <li><i class="fas fa-play"></i></li>
+                <li><i class="fas fa-plus"></i></li>
+                <li><i class="fas fa-info"></i></li>
+              </ul>
+            </div>
+    </div>
+  </div>
+  </div>
+        </div>
+      </div>
+      </div>
+  </section>
+  <section class="popular-owl">
+    <div class="container p-0">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="title">popular movies</h2>
+          <div class="movie-content">
+            <div class="row">
+          <app-owl></app-owl> 
+          </div>
+          </div> 
+      </div>
+      </div>
+      </div>
+  </section>
+  <section class="swipper">
+    <div class="container p-0">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="title">TOP 10 BOX OFFICE</h2>
+          <app-swipper></app-swipper>
+        </div>
+      </div>
+    </div>
+   
+  </section>
+  <section class="subscribe">
+    <div class="container m-0">
+      <div class="row">
+        <div class="col-md-12">
+    <div class="subscribe-content">
+      <h2 class="subscribe-header">Subscribe Now</h2>
+      <input class="form-control subscribe-form" placeholder="Enter Your Email" required/>
+      <button class="home-button float-right mr-0">Subscribe</button>
+    </div>
+  </div>
+</div>
+</div>
+  </section>
+<app-footer></app-footer>

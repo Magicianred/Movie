@@ -1,0 +1,24 @@
+<swiper [config]="config"
+[navigation]="true">
+<ng-container *ngFor="let i of data">
+<ng-template swiperSlide >
+    <div class="swipper-content">
+        <div class="image">
+        <img [src]="'https://image.tmdb.org/t/p/w300'+i.poster_path"/>
+    </div>
+        <div class="swipper-caption">
+            <h2 class="title">{{i.title}}</h2>
+            <p class="description mb-4">{{i.overview}}</p>
+            <div class="buttons">
+                <button type="button" class="home-button">
+                    <i class="fas fa-play"></i> Play</button>
+                <button type="button" class="home-button">
+                    <i class="fas fa-plus"></i> My list
+                </button>
+
+            </div>
+        </div>
+    </div>
+</ng-template>
+</ng-container>
+</swiper>

@@ -1,0 +1,26 @@
+<nav class="navbar navbar-light">
+  <a class="navbar-brand p-0" routerLink="/home">
+    <img src='/assets/images/logo-small.png' class="logo-image"/>
+   </a></nav>
+<section class="login">
+<div class="container">
+<form #loginForm="ngForm" (ngSubmit)="loginForm.valid && Check(loginForm.value)" novalidate>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" (ngModel)="email" name="email">
+      <em class="error" *ngIf="valid && !loginForm.controls.email.dirty">Please enter a valid Email</em>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" (ngModel)="password" name="password">
+      <em class="error"  *ngIf="valid && !loginForm.controls.password.dirty">Your password must contain between 4 and 60 characters.</em>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="home-button">Submit</button>
+    <a routerLink="/create" class="login-link"> Don't have account? register Now</a>
+  </form>
+</div>
+</section>

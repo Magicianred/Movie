@@ -1,0 +1,105 @@
+.sub-header{
+    background-image: linear-gradient(to right, rgb(12, 21, 26), rgba(0, 0, 0, 0.69)), url('../../assets/images/best-series.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: white;
+}
+.breadcrumb-nav {
+    position: relative;
+    z-index: 2;
+}
+.Page-title {
+    font-size: 51px;
+    position: relative;
+    z-index: 2;
+}
+.breadcrumb-nav .breadcrumb {
+    display: inline-block;
+}
+
+.breadcrumb-nav ol {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+.breadcrumb {
+    background: transparent !important;
+    padding: 25px 0 25px;
+}
+.breadcrumb li {
+    float: left;
+    color: #777;
+    display: flex;
+    align-items: center;
+}
+.breadcrumb li a {
+    padding: 0 9px;
+    font-size: 13px;
+    color: inherit;
+    transition: all 0.25s ease-in-out;
+}
+.breadcrumb li a:hover{
+    color: #ff0000;
+    text-decoration: none;
+}
+.row:first-child{
+    margin-bottom: 50px;
+}
+.pricing-content{
+    color: white;
+}
+.pricing-paragraph{
+    font-size: 14px;
+    line-height: 1.5;
+}
+.pricing-content .card {
+    border: none;
+    padding: 35px;
+    transition: all 0.3s;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 10%);
+    background: #000;
+}
+.pricing .text-muted {
+    opacity: 0.7;
+}
+.pricing .card-title {
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.pricing .card-price {
+    font-size: 48px;
+    margin: 0;
+}
+.pricing .card-price .period {
+    font-size: 13px;
+}
+.pricing hr {
+    background-color: #e7e7e7;
+    border: 0;
+    height: 1px;
+    margin: 24px 0;
+}
+.card-body{
+    font-size: 12px;
+}
+.home-button{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.card:hover{
+    margin-top: -5px;
+}
+.bg-1{
+    margin-top: 70px;
+}
+.footer{
+    margin-top: 80px;
+}

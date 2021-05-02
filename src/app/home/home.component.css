@@ -1,0 +1,180 @@
+.bg-1{
+    width: 100%;
+    position: relative;
+    padding-left:50px;
+
+}
+
+.bg-1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(39 40 41) 0%, rgb(39 40 41) 35%, rgba(83, 100, 141, 0) 100%);
+    z-index: 1;
+}
+.home .container-fluid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    color: white;
+    padding: 0 150px;
+}
+
+.new{
+    background-color: #ffc107!important;
+    color: black;
+    padding: .25em .4em;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.home-content h1{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 10px 0 30px 0;
+    font-size: 63px;
+    letter-spacing: 0.05rem;
+}
+.specification{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin-bottom: 35px;
+}
+
+.plus{
+    border: #ff0000 2px solid;
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+.specification span:first-child,.specification span:last-child{
+    padding-top: 4px;
+}
+.home-content p{
+    width: 81%;
+}
+
+:host ::ng-deep .bg-dark{
+    box-shadow: none!important;
+   }
+ 
+
+   .movies{
+       margin-top: 90px;
+   }
+  
+   .movies .col-md-12{
+       margin-left: auto;
+       margin-right: auto;
+       text-align: center;
+   }
+   .nav-tabs{
+       border: none;
+       margin-bottom: 25px;
+   }
+   .nav-link{
+    color: #fff!important;
+    background-color: transparent  !important;
+    border-radius: 0  !important;
+    border:none;
+    text-transform: capitalize;
+   }
+   .nav-link:hover{
+       cursor: pointer;
+   }
+   .nav-link.active{
+       background-color: #ff0000!important;
+   }
+   .title{
+    margin-bottom: 45px;
+    position: relative;
+    letter-spacing: .64px;
+    color: #fff;
+    line-height: 25px;
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: uppercase;
+   }
+   .title:before{
+    background: #ff0000;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    bottom: -15px;
+    width: 50px;
+   }
+
+   .subscribe{
+       margin-top: 80px;
+    background-image: linear-gradient(to top, #202020, rgb(2 2 2 / 90%)), url('../../assets/images/best-series.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.subscribe-content{
+    width: 60%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+}
+.subscribe-header{
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom:20px;
+}
+.subscribe-form{
+    background-color: transparent;
+    margin-bottom: 15px;
+}
+.subscribe-form:focus{
+    box-shadow: none;
+    border-color:#fff ;
+}
+
+
+@media(max-width:767px){
+    .home-content h1{
+        font-size: 40px;
+        margin: 10px 0;
+    }
+    .home-content p{
+        width: 80%;
+    }
+    .specification{
+        margin: 0;
+        width: 50%;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+    .bg-1{
+        height: 460px;
+    }
+    .bg-1 img{
+        height: 100%!important;
+    }
+    .home .container-fluid{
+        padding: 0px 65px;
+    }
+    .subscribe-header{
+        font-size: 30px;
+    }
+    .subscribe-content{
+        width: 70%;
+    }
+}
+
+@media (max-width:992px){
+    .home{
+        margin-top: 108px;
+    }
+}

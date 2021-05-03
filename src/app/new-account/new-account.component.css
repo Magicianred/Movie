@@ -16,61 +16,6 @@
     width: 100%;
 }
 
-.login-link{
-    color: white;
-    float: right;
-    display: block;
-    font-size: 12px;
-    margin-bottom: 10px;
-    margin-top: 5px;
-}
-.or{
-    text-align: center;
-    width: 100%;
-    margin-top: 30px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-
-}
-.or-span{
-    display: block;
-}
-
-.or::before,.or::after{
-    position: absolute;
-    content: "";
-    width: 43%;
-    top: 62%;
-    border-top: 1px solid white;
-}
-.or::before{
-    left: 0;
-}
-.or::after{
-    right: 0;
-}
-.btn-light{
-    display: block;
-    width: 100%;
-    margin-top: 20px;
-}
-.fa-google{
-    font-size: 20px;
-    padding-left: 20px;
-    background: linear-gradient(347deg,transparent 53%,#ea4335 54%), 
-    linear-gradient(to left,transparent 32%,#fbbc05 13%),
-     linear-gradient(11deg,transparent 46%,#4285f4 48%), #34a853;
-  background-repeat:no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-.google-sign span{
-    margin-left: -20px;
-    font-weight: 500;
-}
 .validate{
     color: #dc3545;
     float:right;
@@ -81,4 +26,12 @@
 }
 .footer{
     margin-top:50px;
+}
+.login-link{
+    color: white;
+    float: right;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }

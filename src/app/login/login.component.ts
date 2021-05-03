@@ -12,9 +12,11 @@ export class LoginComponent implements OnInit {
  user:any[]=[];
  email:any;
  password:any;
+ bodyTag: HTMLBodyElement = document.getElementsByTagName('body')[0];
  constructor(private userService:UserService,private router:Router) { }
 
   ngOnInit(): void {
+    this.bodyTag.classList.add('login-page');
   this.userService.getUsers().subscribe((user:any)=>{
       this.user=user
   })
@@ -30,6 +32,8 @@ this.valid=true
   }
 })
   }
-
+  ngOnDestroy() {
+    this.bodyTag.classList.remove('login-page');
+  }
 
 }

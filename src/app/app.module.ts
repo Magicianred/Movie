@@ -53,17 +53,7 @@ import { PricingComponent } from './pricing/pricing.component';
     BrowserAnimationsModule,
     SwiperModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    RouterModule.forRoot([
-      {path:"movie" , component:MovieComponent},
-      {path:"favourite",component:FavoriteComponent},
-      {path:"login",component:LoginComponent},
-      {path:"create",component:NewAccountComponent},
-      {path:'home',component:HomeComponent},
-      {path:'pricing',component:PricingComponent},
-      {path:"",redirectTo:'home',pathMatch:'full'},
-      {path:'**',redirectTo:'home',pathMatch:'full'}//for 404 error
-    ])
+    AngularFireDatabaseModule
   ],
   providers: [
     UserService,

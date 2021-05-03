@@ -3,7 +3,18 @@
     <img src='/assets/images/logo-small.png' class="logo-image"/>
    </a></nav>
 <section class="login">
-<div class="container">
+<div class="container mt-2">
+<div class="row justify-content-center">
+  <div class=" col-10 col-sm-10 col-md-7 col-lg-5">
+<div class="google-sign">
+    <button class="btn btn-light">
+      <i class="fab fa-google float-left"></i>
+        <span> Sign in with Google</span>
+    </button>
+    <div class="or">
+      <span class="or-span">or</span>
+  </div>
+</div>
 <form #loginForm="ngForm" (ngSubmit)="loginForm.valid && Check(loginForm.value)" novalidate>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -22,5 +33,7 @@
     <button type="submit" class="home-button">Submit</button>
     <a routerLink="/create" class="login-link"> Don't have account? register Now</a>
   </form>
+</div>
+</div>
 </div>
 </section>

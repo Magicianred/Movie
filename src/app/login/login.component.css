@@ -1,31 +1,15 @@
-.login,.create-account{
-    width: 35%;
+.col-lg-5{
     color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid white;
-
- 
+      border: 1px solid white; 
+      padding: 40px 50px 20px 50px;
 }
 
-.container{
-    padding: 60px;
-    margin: 0;
-}
- 
 
-::ng-deep body{
-    background-image:url('../../assets/images/best-series.jpg');
-    background-color:linear-gradient(to top, #202020, rgb(2 2 2 / 90%));
-    background-blend-mode: overlay;
-}
+
 .login-link{
     color: white;
     float: right;
-    display: block;
+    display: block; 
     font-size: 12px;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -40,4 +24,59 @@
 }
 .navbar-brand{
     margin: 22px 175px;
+}
+
+.login-link{
+    color: white;
+    float: right;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.or{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+.or-span{
+    display: block;
+}
+
+.or::before,.or::after{
+    position: absolute;
+    content: "";
+    width: 43%;
+    top: 62%;
+    border-top: 1px solid white;
+}
+.or::before{
+    left: 0;
+}
+.or::after{
+    right: 0;
+}
+.btn-light{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+.fa-google{
+    font-size: 20px;
+    padding-left: 20px;
+    background: linear-gradient(347deg,transparent 53%,#ea4335 54%), 
+    linear-gradient(to left,transparent 32%,#fbbc05 13%),
+     linear-gradient(11deg,transparent 46%,#4285f4 48%), #34a853;
+  background-repeat:no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.google-sign span{
+    margin: 10px 0;
+    font-weight: 500;
 }

@@ -109,3 +109,8 @@ body{
    input:focus::placeholder{
     opacity: 0;
    }
+   .login-page{
+    background-image:url('/assets/images/best-series.jpg')!important;
+    background-color:linear-gradient(to top, #202020, rgb(2 2 2 / 90%));
+    background-blend-mode: overlay;
+}

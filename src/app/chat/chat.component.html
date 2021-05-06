@@ -1,0 +1,36 @@
+<div class="chat" *ngIf="currentUser!==undefined">
+        <div class="card mr-1" *ngFor="let name of name">
+            <button class="btn chat-button" type="button" data-toggle="collapse" [attr.data-target]="'#'+name" aria-expanded="false" [attr.aria-controls]="name">
+                <span  class="user-name">{{name}}
+                    <i class="fas fa-times" (click)="close(name)"></i>
+                </span>    
+                </button>
+          <div [id]="name" class="collapse" [id]="name">
+            <div class="card-body">
+                <div class="room" >
+                    <ul class="conversation" >
+                        <ng-container *ngFor="let message of chats">
+                        <ng-container *ngIf="message.secondName===name || message.firstName===name">
+                        <li [ngClass]="message.firstName===currentUser?' message white':'message red'" *ngFor="let m of message.message">
+                                <span>{{m.message}}</span>
+                        </li>
+                    </ng-container>
+                </ng-container>
+
+                    </ul>
+                </div>
+                <input class="form-control chat-input" placeholder="write your message" (keyup.enter)="addMessage($event,name)"/>
+            </div>
+    </div>
+        </div>
+    <div class="dropup">
+        <button type="button" class="chat-box" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="far fa-2x fa-comment-dots"></i>    </button>
+        <div class="users dropdown-menu">
+                <a class="user" *ngFor="let user of users"  (click)="Open(user)">{{user}}</a>
+        </div>
+
+      </div>
+</div>
+
+

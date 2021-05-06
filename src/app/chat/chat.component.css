@@ -1,0 +1,156 @@
+.far{
+    background-color: #ff0000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 9px;
+}
+.chat{
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    z-index: 9999;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+}
+.users{
+    padding: 0;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    padding-bottom: 15px;
+}
+.user{
+    padding: 1rem 2rem;
+    display: block;
+    color: black;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition:all 0.25s ease-in-out;
+}
+.user:hover{
+    background-color: #ff0000;
+    color:white;
+    text-decoration: none;
+    cursor:pointer;
+}
+.chat-box{
+    background:none;
+    border:none;
+    color: white;
+}
+
+.chat-button{
+    outline: none;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-size: 14px;
+    background-color: #ff0000;
+    text-align: left;
+    width:100%
+}
+
+
+.user-name{
+    width: 100%;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.card-body{
+    background-color: white;
+    padding: 0;
+}
+.conversation{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.room{
+    padding-top: 10px;
+    min-height: 150px;
+    padding-bottom: 25px;
+    margin-bottom: 32px;
+}
+.chat-input{
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid #e5e5e5;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+}
+.fa-times{
+    float: right;
+    margin-top: 0.3rem;
+}
+.fa-times:hover{
+    cursor: pointer;
+}
+.messages{
+    padding: 1rem 2rem;
+    margin-bottom: 5px;
+}
+.message{  
+    width: 80%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+    padding: 0.2rem 0.5rem;
+    box-shadow: 0px 3px 4px 0 rgba(229,229,229,0.5)
+   
+}
+.white::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em;
+    bottom: -17px;
+    right: 10px;
+    box-sizing: border-box;
+    border: 0.5em solid black;
+    border-color: transparent transparent white white;
+    transform-origin: 0 0;
+    transform: rotate(305deg);
+    box-shadow: -3px 3px 4px 0 rgb(229, 229, 229, 0.5);
+
+}
+.white{
+    color: black;
+    background-color: white;
+    margin-left: auto;
+    margin-right: 12px;
+}
+.red{
+background-color: #ff0000;
+color: white;
+border-color: #ff0000;
+margin-left: 12px;
+}
+.red::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em;
+    bottom: -13px;
+    left: 15px;
+    box-sizing: border-box;
+    border: 0.5em solid black;
+    border-color: transparent transparent #ff0000 #ff0000;
+    transform-origin: 0 0;
+    transform: rotate(323deg);
+    box-shadow: -3px 3px 4px 0 rgb(229, 229, 229, 0.5);
+
+}
+.card{
+    background: none;
+    border: none;
+    width: 220px;
+}
+.card-header{
+    padding: 0;
+}

@@ -10,16 +10,17 @@ import { MovieService } from 'src/app/movie.service';
   styleUrls: ['./owl.component.css']
 })
 export class OwlComponent implements OnInit{
-owl:Movie[]=[];
+  slidesStore:Movie[]=[];
   
   customOptions: OwlOptions = {
     loop: true,
+    autoWidth :true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
     autoplay:true,
-    nav: false,
-    dots:false,
+    nav: true,
+    dots:true,
     navSpeed: 700,
     responsive: {
       0: {
@@ -34,13 +35,13 @@ owl:Movie[]=[];
       940: {
         items: 5
       }
-    }
+    },
   }
   constructor(private movieService:MovieService) { }
 
   ngOnInit(): void {
     this.movieService.getMovies("popular").subscribe((item:any)=>{
-      this.owl=item    
+      this.slidesStore=item    
     })
 }
 }

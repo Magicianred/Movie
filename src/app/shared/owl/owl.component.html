@@ -1,11 +1,11 @@
-<owl-carousel-o [options]="customOptions">
-    <ng-container *ngFor="let owl of owl">
-    <ng-template  carouselSlide [dataMerge]="30" >
+<owl-carousel-o [options]="customOptions" >
+    <ng-container *ngFor="let slide  of slidesStore">
+    <ng-template  carouselSlide [dataMerge]="30" [width]="266" >
                         <div class="movie-card">
                         <div class="image">
-                        <img [src]="'https://image.tmdb.org/t/p/w300'+owl.poster_path"/>
+                        <img [src]="'https://image.tmdb.org/t/p/w300'+slide.poster_path"/>
                       </div>
-                      <h2 class="movie-title">{{owl.title}}</h2>
+                      <h2 class="movie-title">{{slide.title}}</h2>
                       <div class="bar">
                         <span class="date">2021</span>
                         <span class="adult">+18</span>

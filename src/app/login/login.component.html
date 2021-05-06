@@ -7,7 +7,7 @@
 <div class="row justify-content-center">
   <div class=" col-10 col-sm-10 col-md-7 col-lg-5">
 <div class="google-sign">
-    <button class="btn btn-light">
+    <button class="btn btn-light" (click)="userService.GoogleAuth()">
       <i class="fab fa-google float-left"></i>
         <span> Sign in with Google</span>
     </button>
@@ -16,6 +16,9 @@
   </div>
 </div>
 <form #loginForm="ngForm" (ngSubmit)="loginForm.valid && Check(loginForm.value)" novalidate>
+  <div class="alert alert-danger" role="alert" *ngIf="valid">
+   email or password is incorrect
+  </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" (ngModel)="email" name="email">

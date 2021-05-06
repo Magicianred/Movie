@@ -25,6 +25,10 @@ import { SwiperModule } from 'swiper/angular';
 import { SwipperComponent } from './shared/swipper/swipper.component';
 import { FooterComponent } from './footer/footer.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { ChatComponent } from './chat/chat.component';
+import { DatePipe } from '@angular/common';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 
 
 @NgModule({
@@ -41,7 +45,8 @@ import { PricingComponent } from './pricing/pricing.component';
     OwlComponent,
     SwipperComponent,
     FooterComponent,
-    PricingComponent
+    PricingComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -53,11 +58,13 @@ import { PricingComponent } from './pricing/pricing.component';
     BrowserAnimationsModule,
     SwiperModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule 
   ],
   providers: [
     UserService,
-    MovieService
+    MovieService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

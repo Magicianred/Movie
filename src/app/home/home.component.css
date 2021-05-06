@@ -140,6 +140,10 @@
     box-shadow: none;
     border-color:#fff ;
 }
+.movie-content{
+    overflow: hidden;
+    width: 100%;
+}
 
 
 @media(max-width:767px){
@@ -175,6 +179,6 @@
 
 @media (max-width:992px){
     .home{
-        margin-top: 108px;
+        margin-top: 100px;
     }
 }

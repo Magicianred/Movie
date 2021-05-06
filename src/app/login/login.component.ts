@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
  email:any;
  password:any;
  bodyTag: HTMLBodyElement = document.getElementsByTagName('body')[0];
- constructor(private userService:UserService,private router:Router) { }
+ constructor(public userService:UserService,private router:Router) { }
 
   ngOnInit(): void {
     this.bodyTag.classList.add('login-page');
